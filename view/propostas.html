@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consult</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/menu.css" />
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <img src="assets/img/default.png" id="avatar">
+        <div id="dados_pessoais">
+        </div>
+    </div>
+    </div>
+
+    <div id="main">
+        <div id="main-header">
+            <span style="font-size:30px;cursor:pointer" onclick="status_nav(nav)">&#9776;</span>
+            <div id="main-header-rigth">
+                <button id="btn1">Mais Opções <i class="fa fa-caret-down"></i></button>
+                <button id="btn3"><i class="fa fa-question"></i> Ajuda</button>
+                <button id="btn4"><i class="fa fa-bell"></i></button>
+            </div>
+        </div>
+        <div>
+            <div id="main-body" class="">
+                <h3 id="logo"> <i class="icon-logo fa fa-search"></i></h3>
+                <button style="font-size:15px;cursor:pointer" onclick="formCadastro()">Formulario de cadastro</button>
+
+            </div>
+            <div id="cadastrar_clientes">
+                <form id="cad_cliente" method="POST">
+                    <div class="row">
+                        <div class="p2">Endereco obra<br> <input type="text" name="endereco_obra" required></div>
+                        <div class="p3">Valor total (R$)<br><input type="number" name="valor_total" required></div>
+                        <div class="p3">
+                            <select name="idcliente" id="select-cliente" required>
+                                <option> Selecionar</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="b1">Sinal <br><input type="text" name="sinal" required></div>
+                        <div class="b2">Quantidade parcelas <br><input type="number" name="quantidade_parcelas"
+                                required></div>
+                        <div class="b2">Email <br><input type="text" name="email" required></div>
+                    </div>
+                    <div class="row">
+                        <div class="p1">Valor parcelas (R$)<br><input type="number" name="valor_parcelas" required>
+                        </div>
+                        <div class="p2">Inicio<br><input type="date" name="data_inicio_pagamento" required></div>
+                        <div class="p3">status<br>
+                            <select name="status" required>
+                                <option value="ativado">ativado</option>
+                                <option value="desativado">desativado</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button onclick="enviar('proposta')">Cadastrar proposra</button>
+                </form>
+            </div>
+        </div>
+        <div id="main-footer">
+            <h3> Propostas </h3>
+            <table id="table">
+                <thead>
+                    <th>Endereço</th>
+                    <th>Valor total</th>
+                    <th>Sinal</th>
+                    <th>Qtd parcelas</th>
+                    <th>Valor parcelas</th>
+                    <th>Inicio pagamento</th>
+                    <th>Nome cliente</th>
+                    <th>status</th>
+                </thead>
+                <tbody id="proposta">
+
+                </tbody>
+            </table>
+            <div id="form2"></div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.6.0.js">
+    </script>
+    <script src="js/menu.js">
+    </script>
+    </script>
+    <script src="js/proposta.js">
+    </script>
+    <script src="js/form_estado.js">
+    </script>
+    <script src="js/cadastrar_cliente.js">
+    </script>
+    <script src="js/bootstrap.js">
+    </script>
+    <script src="js/bootstrap.bundle.js">
+    </script>
+    <script src="js/poper.js">
+    </script>
+</body>
+
+</html>

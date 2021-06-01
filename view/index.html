@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consult</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/menu.css" />
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <img src="assets/img/default.png" id="avatar">
+        <div id="dados_pessoais">
+        </div>
+    </div>
+    </div>
+
+    <div id="main">
+        <div id="main-header">
+            <span style="font-size:30px;cursor:pointer" onclick="status_nav(nav)">&#9776;</span>
+            <div id="main-header-rigth">
+                <button id="btn1">Mais Opções <i class="fa fa-caret-down"></i></button>
+                <button id="btn3"><i class="fa fa-question"></i> Ajuda</button>
+                <button id="btn4"><i class="fa fa-bell"></i></button>
+            </div>
+        </div>
+        <div>
+            <div id="main-body" class="">
+                <h3 id="logo"> <i class="icon-logo fa fa-search"></i></h3>
+                <div id="formulario">
+                    <div id="grupo1">
+                        tipo <br>
+                        <select id="select_param" onchange="mudar_design()">
+                            <option value="Nome">Nome</option>
+                            <option value="cnpj">CNPJ</option>
+                            <option>celular</option>
+                            <option value="cpf">CPF</option>
+                        </select>
+                    </div>
+                    <div id="grupo2">
+                        <span id="design"></span><br>
+                        <input type="text" id="valor" onkeyup="pesquisar()">
+                    </div>
+                </div>
+                <button style="font-size:15px;cursor:pointer" onclick="formCadastro()">Formulario de propostas</button>
+
+            </div>
+            <div id="cadastrar_clientes">
+                <form id="cad_cliente" method="POST">
+                    <div class="row">
+                        <div class="p1">Endereco Obra<br><input type="text" name="nome_fantasia"></div>
+                        <div class="p2">Valor total<br> <input type="text" name="endereco_obra"></div>
+                        <div class="p3">Sinal <br><input type="text" name="valor_total"></div>
+                    </div>
+                    <div class="row">
+                        <div class="b1">Quantidade parcelas <br><input type="text" name="sinal"></div>
+                        <div class="b2">Email <br><input type="text" name="quantidade_parcelas"></div>
+                    </div>
+                    <div class="row">
+                        <div class="p1">Valor parcelas<br><input type="text" name="valor_parcelas"> </div>
+                        <div class="p2">Inicio<br><input type="text" name="data_inicio_pagamento"></div>
+                        <div class="p3">arquivo<br><input type="text" name="status"></div>
+                    </div>
+                    <button onclick="enviar('cliente')">Cadastrar cliente</button>
+                </form>
+            </div>
+        </div>
+        <div id="main-footer">
+            <h3> Clientes </h3>
+            <table id="table">
+                <thead>
+                    <th>Endereco Obra</th>
+                    <th>Valor total</th>
+                    <th>Sinal</th>
+                    <th>Quantidade parcelas</th>
+                    <th>Valor parcelas</th>
+                    <th>Inicio</th>
+                    <th>Status</th>
+                    <th>arquivo</th>
+                </thead>
+                <tbody id="cleintes">
+
+                </tbody>
+            </table>
+            <div id="form2"></div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" id="proposta-all">
+                <table>
+                    <thead>
+                        <th>Endereco obra</th>
+                        <th>Valor total</th>
+                        <th>Valor parcelas</th>
+                        <th>Quantidade parcelas</th>
+                    </thead>
+                    <tbody id="propostas-atreladas">
+                    </tbody>
+                </table>
+                <button id="btnExport">exportar</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.6.0.js">
+    </script>
+    <script src="js/menu.js">
+    </script>
+    <script src="js/index.js">
+    </script>
+    </script>
+    <script src="js/cadastrar_cliente.js">
+    </script>
+    <script src="js/form_estado.js">
+    </script>
+    <script src="js/bootstrap.js">
+    </script>
+    <script src="js/bootstrap.bundle.js">
+    </script>
+    <script src="js/poper.js">
+    </script>
+</body>
+
+</html>

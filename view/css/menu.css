@@ -1,0 +1,273 @@
+ body {
+           font-family: 'PT Sans', sans-serif;
+            background-color: #f1f1f1;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(87, 87, 87);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        #main {
+            transition: margin-left .5s;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+        #avatar{
+        width: 150px;
+        height: 150px;  
+        border-radius: 50%;
+        }
+        #dados_pessoais
+        {
+        font-family: sans-serif;
+        font-weight: bold;
+        color: white;
+        }
+
+        #btn_ligar{
+        background-color: purple;
+        border: none;
+        color: white;
+        box-shadow: 2px 2px 2px rgb(54, 54, 54);
+        font-size: 20px;
+        padding: 10px 30px 10px 30px;
+        transition: 0.5s;
+        border-radius: 5px;
+        }
+
+        #btn_ligar:hover{
+        cursor: pointer;
+        background-color: blueviolet;
+        transition: 0.5;
+        }
+
+        #localizar-header{
+        margin-top: 10px;
+        width: 100%;
+        padding-left: 15px;
+        background-color: rgb(79, 15, 139);
+        color: white;
+        padding: 10px;
+        
+        }
+
+        #localizar-content{
+        width: 100%;
+        height: 100%;
+        background-color: rgb(171, 81, 255);
+        color: rgb(81, 40, 119);
+        padding-left: 15px;
+        }
+
+        .logo {
+        margin-left: 10px;
+        background-color: white;
+        color: purple;
+        padding: 10px;
+        border-radius: 0px 8px 0px 8px;
+        }
+
+        #main-header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        padding: 10px;    
+        }
+
+        #btn1{
+        background-color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        margin-right: 10px;
+        }
+        #btn1:hover{
+        cursor: pointer;
+        border: 1px solid blueviolet;
+        color: blueviolet;
+        }
+
+        #btn2{
+        background-color: purple;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        color: white;
+        margin-right: 10px;
+        }
+        #btn2:hover{
+        cursor: pointer;
+        }
+
+        #btn3{
+        background-color: white;
+        border: 1px solid purple;
+        padding: 10px;
+        border-radius: 5px;
+        color: purple;
+        margin-right: 10px;
+        }
+        #btn3:hover{
+        cursor: pointer;
+        }
+
+        #btn4{
+        background-color: white;
+        border: none;
+        font-size: 25px;
+        color: #4444;
+        }
+
+        #btn4:hover{
+        cursor: pointer;
+        }
+        #main-body{
+        margin-top: 20px;
+        border-top:  purple solid;
+        background-color: white;
+        }
+
+        #main-body h3 {
+        text-align: center;
+        color: purple;
+        }
+
+        .icon-logo{
+        padding: 10px;
+        background-color: purple;
+        color: white;
+        border-radius: 0px 8px 0px 8px;
+        }
+        #formulario{
+        display: flex;
+        flex-direction: row;
+        }
+
+        #grupo1 {
+        margin: 10px;
+        width: 20%;
+        /*font-size: 20px;*/
+        }
+
+        #grupo1 select {
+        width: 100%;
+        height: 35px;
+        font-size: 15px;
+        border: 2px rgba(128, 128, 128, 0.438) solid;
+        border-radius: 5px;
+        outline: none;
+        }
+
+        #grupo2 {
+        margin: 10px;
+        width: 80%;
+        /*font-size: 20px;*/
+        padding-right: 10px;
+        }
+
+        #grupo2 input {
+        width: 100%;
+        height: 30px;
+        font-size: 15px;
+        border: 2px rgba(128, 128, 128, 0.438) solid;
+        border-radius: 5px;
+        outline: none;
+        }
+
+        #main-footer{
+        margin-top: 20px;
+        padding-left: 10px;
+        background-color: white;
+        border-top: 2px #4444 solid;
+        }
+
+        #table {
+        width: 100%;
+        text-align: center;
+        }
+        #cadastrar_clientes{
+        background-color: white;
+        margin-top: 10px;
+        padding: 10px;
+        padding-left: 30px;
+        }
+        #cadastrar_clientes input {  
+          width: 80%;
+        height: 30px;
+        font-size: 15px;
+        border: 2px rgba(128, 128, 128, 0.438) solid;
+        border-radius: 5px;
+        
+        }
+        #cadastrar_clientes input:focus {
+        border: none;
+        outline: none;
+        border-bottom: 2px solid purple;
+        }
+        .b-none{
+        margin-right: -100px;
+        }
+.p1{
+width: 60%;
+}
+.p2{
+width: 20%;
+}
+
+.p3{
+width: 20%;
+}
+.b1{
+width: 30%;
+}
+.b2{
+width: 30%;
+}
+
+.b3{
+width: 30%;
+}
